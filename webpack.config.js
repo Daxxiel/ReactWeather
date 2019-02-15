@@ -36,6 +36,7 @@ module.exports = {
   module:{
     loaders:[
       {
+        test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192',
         loader: 'babel-loader',
         query:{
           presets:['react', 'es2015']
