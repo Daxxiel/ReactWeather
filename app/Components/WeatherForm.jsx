@@ -1,7 +1,7 @@
 var React = require('react');
 
 var WeatherForm = React.createClass({
-  onFormSubmit: function(e) {
+  onFormSubmit: function (e) {
     e.preventDefault();
 
     var location = this.refs.location.value;
@@ -11,14 +11,15 @@ var WeatherForm = React.createClass({
       this.props.onSearch(location);
     }
   },
-  render: function() {
+  render: function () {
     return (
-    <div>
-      <form onSubmit={this.onFormSubmit}>
-        <input type="search" ref="location" placeholder="Search weather by city"/>
-        <button className="button expanded hollow">Get weather</button>
-      </form>
-    </div>);
+        <div>
+          <form onSubmit={this.onFormSubmit}>
+            <input type="search" ref="location" placeholder="Search weather by city"/>
+            <button className="button expanded hollow">Get Weather</button>
+          </form>
+        </div>
+    );
   }
 });
 

@@ -1,4 +1,5 @@
 var React = require('react');
+
 var ErrorModal = React.createClass({
   getDefaultProps: function () {
     return {

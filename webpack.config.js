@@ -6,13 +6,13 @@ module.exports = {
     'script!foundation-sites/dist/foundation.min.js',
     './app/app.jsx'
   ],
-  externals:{
+  externals: {
     jquery: 'jQuery'
   },
-  plugins:[
+  plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
-      'jquery': 'jQuery'
+      'jQuery': 'jquery'
     })
   ],
   output: {
@@ -22,25 +22,25 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      Main: 'app/Components/Main.jsx',
-      Nav: 'app/Components/Nav.jsx',
-      Weather: 'app/Components/Weather.jsx',
-      WeatherForm: 'app/Components/WeatherForm.jsx',
-      WeatherMessage: 'app/Components/WeatherMessage.jsx',
-      About: 'app/Components/About.jsx',
-      Examples: 'app/Components/Examples.jsx',
+      Main: 'app/components/Main.jsx',
+      Nav: 'app/components/Nav.jsx',
+      Weather: 'app/components/Weather.jsx',
+      WeatherForm: 'app/components/WeatherForm.jsx',
+      WeatherMessage: 'app/components/WeatherMessage.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx',
       openWeatherMap: 'app/api/openWeatherMap.jsx',
-      ErrorModal: 'app/Components/ErrorModal.jsx',
-      applicationStyles: 'app/Styles/app.css'
+      ErrorModal: 'app/components/ErrorModal.jsx',
+      applicationStyles: 'app/styles/app.scss'
     },
-    extensions :['','.js','.jsx']
+    extensions: ['', '.js', '.jsx']
   },
-  module:{
-    loaders:[
+  module: {
+    loaders: [
       {
         loader: 'babel-loader',
-        query:{
-          presets:['react', 'es2015']
+        query: {
+          presets: ['react', 'es2015']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
